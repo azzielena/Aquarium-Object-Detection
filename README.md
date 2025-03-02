@@ -23,12 +23,12 @@ You can install the necessary packages by running:
 
 ```bash
 pip install torch torchvision
-'''
+```
 
 If you need additional packages (e.g., tensorboard, pyyaml, tqdm, pillow), install them with:
 ```bash
 pip install tensorboard pyyaml tqdm pillow
-
+```
 ## Dataset Preparation 📥
 
 Download the dataset from Kaggle using the following link:  
