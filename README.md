@@ -39,6 +39,30 @@ Extract the content and place the dataset in the same folder as the project. Ens
 - `images_dir_validation` and `labels_dir_validation`for validation,
 - `images_dir_test` and `labels_dir_test` for testing.
 
+## Project Folder Structure
+Below is a simplified diagram showing how the dataset folder (downloaded from Kaggle) and the code folder should be organized within a single project folder:
+```bash
+project/
+├── aquarium_pretrain/          # External dataset folder downloaded from Kaggle
+│   ├── train/
+│   │   ├── images/
+│   │   └── labels/
+│   ├── valid/
+│   │   ├── images/
+│   │   └── labels/
+│   └── test/
+│       ├── images/
+│       └── labels/
+└── code/                       # Folder containing all our code files
+    ├── addestramentoTB.py
+    ├── valutazioneTB.py
+    ├── modelVisualizationTest.py
+    ├── provaAugmentation.py
+    ├── solver.py
+    ├── custom_utils.py
+    └── config.py
+```
+
 ## How to Use 📝
 
 ### 1. Training the Model 💪
