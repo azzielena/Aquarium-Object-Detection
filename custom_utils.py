@@ -119,7 +119,7 @@ class CustomDataset(Dataset):
 
 transformsTrain = v2.Compose([
     v2.ToImage(),
-    v2.RandomPhotometricDistort(p=1), 
+    v2.RandomPhotometricDistort(p=0.5), 
     v2.RandomZoomOut(fill={tv_tensors.Image: (123, 117, 104), "others": 0}),
     #v2.RandomIoUCrop(),
     v2.RandomHorizontalFlip(p=0.5),
