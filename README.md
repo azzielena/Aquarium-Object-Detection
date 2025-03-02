@@ -32,12 +32,12 @@ pip install tensorboard pyyaml tqdm pillow
 ## Dataset Preparation 📥
 
 Download the dataset from Kaggle using the following link:  
-[Aquarium Data COTS](https://www.kaggle.com/datasets/slavkoprytula/aquarium-data-cots/data) 😃
+[Aquarium Data COTS](https://www.kaggle.com/datasets/slavkoprytula/aquarium-data-cots/data) 🐠
 
 Extract the content and place the dataset in the same folder as the project. Ensure that the folder structure matches what is specified in `config.py`, especially for the directories:
 - `images_dir_training` and `labels_dir_training` for training,
-- `images_dir_validation` for validation,
-- `images_dir_test` for testing.
+- `images_dir_validation` and `labels_dir_validation`for validation,
+- `images_dir_test` and `labels_dir_test` for testing.
 
 ## How to Use 📝
 
@@ -50,7 +50,7 @@ python addestramentoTB.py
 ```
 This script:
 - Loads the training and validation datasets.
-- Configures the model according to the parameters defined in config.py.
+- Configures the model according to the parameters defined in `config.py`.
 - Starts the training process, periodically saving the model when an improvement in loss is detected. 👍
 
 ### 2. Evaluating the Model 📊
@@ -58,14 +58,14 @@ After training the model, run the `valutazioneTB.py` script to evaluate it on th
 ```bash
 python valutazioneTB.py
 ```
-The script will load the saved model, perform predictions on the testing dataset, and print metrics such as mAP, Precision, Recall, and F1-Score. Additionally, TensorBoard logs will be saved. 🔍
+The script will load the saved model, perform predictions on the testing dataset, and print metrics such as mAP, Precision, Recall, and F1-Score. Additionally, TensorBoard logs will be saved and you can see image results. 🔍
 
 ### 3. Interactive Visualization 👀
 To start an interactive visualization of the predictions, use the `modelVisualizationTest.py` script:
 ```bash
 python modelVisualizationTest.py
 ```
-This script allows you to visualize test images with their corresponding bounding boxes and labels, making it easier to analyze the results. ✨
+This script allows you to visualize test images with their corresponding bounding boxes and labels, making it easier to analyze the results. 🐠
 
 ### 4. Support Files 🛠️
 The other files in the repository serve the following purposes:
