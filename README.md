@@ -23,6 +23,7 @@ You can install the necessary packages by running:
 
 ```bash
 pip install torch torchvision
+'''
 
 If you need additional packages (e.g., tensorboard, pyyaml, tqdm, pillow), install them with:
 ```bash
