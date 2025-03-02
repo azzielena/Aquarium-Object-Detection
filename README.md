@@ -47,7 +47,7 @@ To train the model, run the `addestramentoTB.py` script:
 
 ```bash
 python addestramentoTB.py
-
+```
 This script:
 - Loads the training and validation datasets.
 - Configures the model according to the parameters defined in config.py.
@@ -57,14 +57,14 @@ This script:
 After training the model, run the `valutazioneTB.py` script to evaluate it on the testing dataset:
 ```bash
 python valutazioneTB.py
-
+```
 The script will load the saved model, perform predictions on the testing dataset, and print metrics such as mAP, Precision, Recall, and F1-Score. Additionally, TensorBoard logs will be saved. 🔍
 
 ### 3. Interactive Visualization 👀
 To start an interactive visualization of the predictions, use the `modelVisualizationTest.py` script:
 ```bash
 python modelVisualizationTest.py
-
+```
 This script allows you to visualize test images with their corresponding bounding boxes and labels, making it easier to analyze the results. ✨
 
 ### 4. Support Files 🛠️
@@ -80,7 +80,7 @@ Ensure that the Kaggle dataset is placed correctly and that the directories spec
 It is recommended to use TensorBoard to monitor the training progress and evaluate performance metrics:
 ```bash
 tensorboard --logdir=runs
-
+```
 
 
 
