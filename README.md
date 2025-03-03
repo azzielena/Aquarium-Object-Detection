@@ -103,7 +103,7 @@ The other files in the repository serve the following purposes:
 - `tester.py`: Implements the functions for testing the model.
 - `augmentations.py`: Provides an example to test and visualize the image transformations.
 
-##Final Notes 💡
+## Final Notes 💡
 Ensure that the Kaggle dataset is placed correctly and that the directories specified in config.py are updated if necessary.
 It is recommended to use TensorBoard to monitor the training progress and evaluate performance metrics:
 ```bash
