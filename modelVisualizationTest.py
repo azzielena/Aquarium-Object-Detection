@@ -9,7 +9,7 @@ from config import images_dir_test, labels_dir_test, yaml_path, DEVICE
 from config import OUT_SAVEMODEL, BATCH_SIZE, NUM_WORKERS, CONFIDENCE_THRESHOLD, IOU_THRESHOLD, MODEL_NAME, MODEL_TYPE
 from custom_utils import CustomDataset, transformsTest
 from solver import Solver
-from evaluatorV3 import Tester  # it contains the interactive_visualization method
+from tester import Tester  # it contains the interactive_visualization method
 
 def get_args():
     parser = argparse.ArgumentParser(description="Interactive Visualization Testing")
