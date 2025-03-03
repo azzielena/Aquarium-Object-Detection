@@ -55,7 +55,7 @@ project/
 │   └── test/
 │       ├── images/
 │       └── labels/
-└── code/                       # Folder containing all our code files
+└── Aquarium-Object-Detection/                       # Folder containing all our code files
     ├── training.py
     ├── testing.py
     ├── modelVisualizationTest.py
