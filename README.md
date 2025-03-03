@@ -54,12 +54,14 @@ project/
 │       ├── images/
 │       └── labels/
 └── code/                       # Folder containing all our code files
-    ├── addestramentoTB.py
-    ├── valutazioneTB.py
+    ├── training.py
+    ├── testing.py
     ├── modelVisualizationTest.py
-    ├── provaAugmentation.py
+    ├── augmentations.py
     ├── solver.py
+    ├── tester.py
     ├── custom_utils.py
+    ├── visualization.py
     └── config.py
 ```
 
@@ -67,7 +69,7 @@ project/
 
 ### 1. Training the Model 💪
 
-To train the model, run the `addestramentoTB.py` script:
+To train the model, run the `training.py` script:
 
 ```bash
 python addestramentoTB.py
@@ -78,9 +80,9 @@ This script:
 - Starts the training process, periodically saving the model when an improvement in loss is detected. 👍
 
 ### 2. Evaluating the Model 📊
-After training the model, run the `valutazioneTB.py` script to evaluate it on the testing dataset:
+After training the model, run the `testing.py` script to evaluate it on the testing dataset:
 ```bash
-python valutazioneTB.py
+python testing.py
 ```
 The script will load the saved model, perform predictions on the testing dataset, and print metrics such as mAP, Precision, Recall, and F1-Score. Additionally, TensorBoard logs will be saved and you can see image results. 🔍
 
@@ -97,7 +99,7 @@ The other files in the repository serve the following purposes:
 - `custom_utils.py`: Defines the custom dataset and the image transformations (augmentation) for training and testing.
 - `solver.py`: Implements the functions for training, validating, and saving the model.
 - `tester.py`: Implements the functions for testing the model.
-- `provaAugmentation.py`: Provides an example to test and visualize the image transformations.
+- `augmentations.py`: Provides an example to test and visualize the image transformations.
 
 ##Final Notes 💡
 Ensure that the Kaggle dataset is placed correctly and that the directories specified in config.py are updated if necessary.
