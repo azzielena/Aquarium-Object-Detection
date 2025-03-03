@@ -3,13 +3,15 @@ This project focuses on underwater object detection using deep learning models, 
 
 ## Repository Contents 📂
 
-- **addestramentoTB.py**: Script to train the model.
-- **valutazioneTB.py**: Script to evaluate the trained model on the testing dataset.
+- **training.py**: Script to train the model.
+- **testing.py**: Script to evaluate the trained model on the testing dataset.
 - **modelVisualizationTest.py**: Script for interactive visualization of results (useful for checking the model's predictions).
-- **provaAugmentation.py**: Script to test image transformations and augmentations.
+- **augmentations.py**: Script to test image transformations and augmentations.
 - **solver.py**: Contains the training, validation, and model saving logic.
+- **tester.py**: Contains the testing logic.
 - **custom_utils.py**: Custom functions and classes, including the dataset and image transformations.
 - **config.py**: Configuration file with parameters for training, validation, and dataset paths.
+- **visualization.py**: This file allows you to view the images in a folder with their respective bounding boxes
 
 ## Prerequisites 🔧
 
