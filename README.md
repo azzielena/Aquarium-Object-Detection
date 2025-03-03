@@ -74,7 +74,7 @@ project/
 To train the model, run the `training.py` script:
 
 ```bash
-python addestramentoTB.py
+python training.py
 ```
 This script:
 - Loads the training and validation datasets.
