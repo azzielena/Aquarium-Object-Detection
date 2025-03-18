@@ -14,15 +14,12 @@ from torch.utils.tensorboard import SummaryWriter
 def get_args():
     parser = argparse.ArgumentParser(description="Testing configuration")
     
-    # Dati per il run e il modello
     parser.add_argument('--model_name', type=str, default=MODEL_NAME, help='Nome del modello da salvare/caricare')
     parser.add_argument('--model_type', type=str, default=MODEL_TYPE, help='Nome del modello da salvare/caricare')
     parser.add_argument('--batch_size', type=int, default=BATCH_SIZE, help='Numero di elementi per batch')
     parser.add_argument('--workers', type=int, default=NUM_WORKERS, help='Numero di workers nel data loader')
     parser.add_argument('--confidence_th', type=int, default=CONFIDENCE_THRESHOLD, help='confidence threshold')
     parser.add_argument('--iou_th', type=int, default=IOU_THRESHOLD, help='iou threshold')
-   
-    # Path e checkpoint
     parser.add_argument('--checkpoint_path', type=str, default=OUT_SAVEMODEL, help='Percorso per salvare il modello addestrato')
     parser.add_argument('--config_dir', type=str, default='./config', help='Directory dei file di configurazione')
     return parser.parse_args()
