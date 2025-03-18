@@ -4,7 +4,7 @@ from torch.utils.data import DataLoader
 import yaml
 import numpy as np
 from config import images_dir_test ,labels_dir_test, yaml_path, DEVICE, OUT_SAVEMODEL, BATCH_SIZE, NUM_WORKERS, CONFIDENCE_THRESHOLD, IOU_THRESHOLD, MODEL_NAME, MODEL_TYPE
-from evaluatorV3 import Tester
+from tester import Tester
 from solver import Solver
 from custom_utils import CustomDataset, transformsTest
 import argparse
