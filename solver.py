@@ -74,10 +74,10 @@ class Solver(object):
             loss_dict = self.net(images, targets) 
             
             # Define the weights you want to assign to each component
-            w_classifier = 1.0
-            w_box_reg = 1.0
+            w_classifier = 1.5
+            w_box_reg = 0.75
             w_objectness = 1.0
-            w_rpn_box_reg = 1.0 
+            w_rpn_box_reg = 0.75 
 
             # Calculate total loss
             loss_total = (w_classifier * loss_dict['loss_classifier'] +
