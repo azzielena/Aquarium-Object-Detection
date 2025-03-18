@@ -13,7 +13,7 @@ with open(yaml_path, 'r') as f:
     data = yaml.safe_load(f)
 
 class_names = data.get('names', [])
-print("Mapping classi:", class_names)
+print("Class Mapping:", class_names)
 
 image_extensions = ('.jpg', '.jpeg', '.png')
 image_files = sorted([f for f in os.listdir(images_dir_training) if f.lower().endswith(image_extensions)])
@@ -22,26 +22,26 @@ font_size = 20
 try:
     font = ImageFont.truetype("arial.ttf", font_size)
 except Exception as e:
-    print("Font 'arial.ttf' non trovato, uso font predefinito.")
+    print("Font 'arial.ttf' not found, using default font.")
     font = ImageFont.load_default()
 
 current_index = 0
 
 def load_and_draw(index):
-    """Carica l'immagine, disegna i bounding box e le etichette convertendo gli ID in nomi"""
+    """Load the image, draw bounding boxes and labels by converting IDs to names"""
     img_name = image_files[index]
     img_path = os.path.join(images_dir_training, img_name)
     try:
         img = Image.open(img_path).convert("RGB")
     except Exception as e:
-        print(f"Errore nell'apertura dell'immagine {img_name}: {e}")
+        print(f"Error opening image {img_name}: {e}")
         return None
 
     width, height = img.size
     
     annotation_path = os.path.join(labels_dir_training, os.path.splitext(img_name)[0] + '.txt')
     if not os.path.exists(annotation_path):
-        print(f"Annotazioni non trovate per: {img_name}")
+        print(f"Annotations not found for: {img_name}")
         return img
 
     draw = ImageDraw.Draw(img)
