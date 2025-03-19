@@ -119,11 +119,11 @@ class Solver(object):
     
     def train(self):
         """Main method for training the model"""
-
         best_val_loss = float('inf')
         patience = self.args.pat  # number of epochs to wait before stopping training
         trigger_times = 0  # counter for early stopping
-
+        self.model.train()
+        
         for epoch in range(self.epochs): 
             print(f"\nEPOCH {epoch+1} of {self.epochs}")
             start = time.time()
