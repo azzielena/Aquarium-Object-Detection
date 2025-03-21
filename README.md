@@ -45,7 +45,7 @@ Extract the content and place the dataset in the same folder as the project. Ens
 Below is a simplified diagram showing how the dataset folder (downloaded from Kaggle) and the code folder should be organized within a single project folder:
 ```bash
 project/
-├── aquarium_pretrain/          # External dataset folder downloaded from Kaggle
+├── aquarium_pretrain/  # External dataset folder downloaded from Kaggle
 │   ├── train/
 │   │   ├── images/
 │   │   └── labels/
@@ -55,7 +55,7 @@ project/
 │   └── test/
 │       ├── images/
 │       └── labels/
-└── Aquarium-Object-Detection/                       # Folder containing all our code files
+└── Aquarium-Object-Detection/  # Folder containing all our code files
     ├── training.py
     ├── testing.py
     ├── modelVisualizationTest.py
