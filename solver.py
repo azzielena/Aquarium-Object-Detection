@@ -21,8 +21,7 @@ class Solver(object):
             self.optimizer = optim.SGD(self.net.parameters(), lr=self.args.lr, momentum=0.9)
         elif self.args.opt == "Adam":
             self.optimizer = optim.Adam(self.net.parameters(), lr=self.args.lr)
-        
-        #for ADAM
+        #optional
         self.scheduler = optim.lr_scheduler.StepLR(self.optimizer, step_size=10, gamma=0.5)
 
         self.epochs = self.args.epochs
@@ -142,8 +141,8 @@ class Solver(object):
             current_lr = self.optimizer.param_groups[0]['lr']
             self.writer.add_scalar('Learning Rate', current_lr, epoch)
 
-            if self.args.opt == "Adam":
-                self.scheduler.step()
+            #optional
+            self.scheduler.step()
 
             # Early stopping: check if validation has improved
             if val_loss_avg < best_val_loss:
